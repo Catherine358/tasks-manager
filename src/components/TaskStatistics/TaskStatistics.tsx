@@ -16,15 +16,15 @@ export default function TaskStatistics() {
     <div className={styles.statsCard}>
       <div className={styles.statRow}>
         <span className={styles.label}>Done</span>
-        <span className={styles.value}>{doneCount}, {donePrcnt}%</span>
+        <span className={styles.value}>{doneCount}/ {donePrcnt}%</span>
       </div>
       <div className={styles.statRow}>
         <span className={styles.label}>New</span>
-        <span className={styles.value}>{newCount}, {newPrcnt}%</span>
+        <span className={styles.value}>{newCount}/ {newPrcnt}%</span>
       </div>
       <div className={styles.statRow}>
         <span className={styles.label}>Escalated</span>
-        <span className={styles.value}>{escalatedCount}, {escalatedPrcnt}%</span>
+        <span className={styles.value}>{escalatedCount}/ {escalatedPrcnt}%</span>
       </div>
       <div className={styles.statRow}>
         <span className={styles.label}>Total</span>

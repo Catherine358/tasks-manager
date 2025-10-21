@@ -1,5 +1,6 @@
-import type {Task} from "../types/task.ts";
+import type {Task} from "../../types/task.ts";
 import {useNavigate} from "react-router-dom";
+import styles from './TaskItem.module.css';
 
 
 export default function TaskItem({ task }: { task: Task }) {
@@ -10,6 +11,7 @@ export default function TaskItem({ task }: { task: Task }) {
   return (
     <li
         onClick={taskHandler}
+        className={`${styles.taskCard} ${styles[task.status]}`}
     >
       {task.name}
     </li>

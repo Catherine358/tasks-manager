@@ -1,0 +1,15 @@
+.container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.statsSection {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.listSection {
+    flex: 1;
+}

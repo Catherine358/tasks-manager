@@ -1,0 +1,33 @@
+.taskCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E3ECF7;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.taskCard:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.status {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* Status Colors */
+.done {
+    border-left: 5px solid #10b981;
+}
+.new {
+    border-left: 5px solid #2563eb;
+}
+.escalated {
+    border-left: 5px solid #f59e0b;
+}

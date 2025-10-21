@@ -1,0 +1,16 @@
+.startButton {
+    width: fit-content;
+    background-color: #0074E8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    margin-top: 1rem;
+}
+
+.startButton:hover {
+    background-color: #1d4ed8;
+}
