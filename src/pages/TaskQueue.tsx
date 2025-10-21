@@ -1,6 +1,6 @@
 import TaskList from "../components/TaskList.tsx";
-import TaskStatistics from "../components/TaskStatistics.tsx";
-import TaskCounter from "../components/TaskCounter.tsx";
+import TaskStatistics from "../components/TaskStatistics/TaskStatistics.tsx";
+import TaskCounter from "../components/TaskCounter/TaskCounter.tsx";
 
 export default function TaskQueue() {
     return (
