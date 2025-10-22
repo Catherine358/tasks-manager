@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TaskQueue from "./pages/TaskQueue/TaskQueue.tsx";
-import TaskDetails from "./pages/TaskDetails.tsx";
+import TaskDetails from "./pages/TaskDetails/TaskDetails.tsx";
 import './App.css'
 
 function App() {

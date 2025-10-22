@@ -1,0 +1,24 @@
+.backContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 10px;
+}
+
+.back {
+    color: #0074E8;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.backIcon {
+    color: #0074E8;
+    font-size: 1.1rem;
+    transform: translateY(-1px);
+}
