@@ -13,3 +13,7 @@
 .listSection {
     flex: 1;
 }
+
+.weatherSection {
+    display: flex;
+}
