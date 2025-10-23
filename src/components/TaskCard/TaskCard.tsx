@@ -24,10 +24,13 @@ export default function TaskCard({ task }: { task: Task }) {
     }
   }, [tasks, navigate, task]);
 
-  const updateStatus = useCallback((status: 'escalated' | 'done') => {
-    dispatch(updateTask({ id: task.id, data: { status } }));
-    goToNextTask();
-  }, [dispatch, task, goToNextTask]);
+  const updateStatus = useCallback(
+    (status: 'escalated' | 'done') => {
+      dispatch(updateTask({ id: task.id, data: { status } }));
+      goToNextTask();
+    },
+    [dispatch, task, goToNextTask]
+  );
 
   useKeyboardShortcuts({ updateStatus });
 
