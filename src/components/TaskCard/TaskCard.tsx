@@ -6,12 +6,20 @@ import {useDispatch, useSelector} from "react-redux";
 import type {RootState} from "../../store/store.ts";
 import {useNavigate} from "react-router-dom";
 import {updateTask} from "../../store/tasksSlice.ts";
+import {useKeyboardShortcuts} from "../../hooks/useKeyboardShortcuts.ts";
 
 export default function TaskCard({ task }: { task: Task }) {
     const tasks = useSelector((state: RootState) => state.tasks.tasks);
     const [birthdate, setBirthdate] = useState<string>('');
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+    const updateStatus = (status: 'escalated' | 'done') => {
+        dispatch(updateTask({ id: task.id, data: { status } }));
+        goToNextTask();
+    };
+
+    useKeyboardShortcuts({ updateStatus });
 
     const goToNextTask = () => {
         const taskIndex = tasks.findIndex(t => t.id === task.id);
@@ -21,11 +29,6 @@ export default function TaskCard({ task }: { task: Task }) {
         } else {
             navigate('/');
         }
-    };
-
-    const updateStatus = (status: 'escalated' | 'done') => {
-        dispatch(updateTask({ id: task.id, data: { status } }));
-        goToNextTask();
     };
 
     const saveBirthdate = () => {
