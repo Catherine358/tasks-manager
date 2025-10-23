@@ -25,7 +25,7 @@ export default function TaskDetails() {
                 </section>
             )}
             <div className={styles.backContainer}>
-                <span className={styles.backIcon}>←</span>
+                <span aria-hidden="true" className={styles.backIcon}>←</span>
                 <Link to="/" className={styles.back}>
                     Back to the queue
                 </Link>

@@ -9,12 +9,15 @@ export default function TaskItem({ task }: { task: Task }) {
   const taskHandler = () => navigate(`/task/${task.id}`);
 
   return (
-    <li
-        onClick={taskHandler}
-        className={`${styles.taskCard} ${styles[task.status]}`}
-    >
-      <span>{task.contractNumber}</span>
-      <span>{task.status}</span>
+    <li>
+      <button
+          className={`${styles.taskCard} ${styles[task.status]}`}
+          onClick={taskHandler}
+          aria-label={`View task ${task.contractNumber} - ${task.name}, Status: ${task.status}`}
+      >
+        <span>{task.contractNumber}</span>
+        <span>{task.status}</span>
+      </button>
     </li>
   );
 };

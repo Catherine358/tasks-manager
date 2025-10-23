@@ -7,14 +7,19 @@
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     padding: 0.5rem;
-    cursor: pointer;
     transition: box-shadow 0.2s ease-in-out;
     font-size: 1rem;
     color: #000000;
+    text-align: left;
 }
 
 .taskCard:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.taskCard:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
 }
 
 .status {
