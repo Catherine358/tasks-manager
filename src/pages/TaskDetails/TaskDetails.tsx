@@ -1,9 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import TaskCounter from '../../components/TaskCounter/TaskCounter.tsx';
 import TaskCard from '../../components/TaskCard/TaskCard.tsx';
-import { useSelector } from 'react-redux';
 import type { RootState } from '../../store/store.ts';
-import { Link } from 'react-router-dom';
 import styles from './TaskDetails.module.css';
 
 export default function TaskDetails() {

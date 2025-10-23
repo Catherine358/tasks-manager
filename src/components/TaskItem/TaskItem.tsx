@@ -1,5 +1,5 @@
-import type { Task } from '../../types/task.ts';
 import { useNavigate } from 'react-router-dom';
+import type { Task } from '../../types/task.ts';
 import styles from './TaskItem.module.css';
 
 export default function TaskItem({ task }: { task: Task }) {

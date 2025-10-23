@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from '../../store/tasksSlice.ts';
-import styles from './FilterBar.module.css';
 import type { RootState } from '../../store/store.ts';
+import styles from './FilterBar.module.css';
 
 export default function FilterBar() {
   const dispatch = useDispatch();

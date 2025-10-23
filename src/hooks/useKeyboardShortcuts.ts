@@ -54,5 +54,5 @@ export const useKeyboardShortcuts = ({
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [navigate, location, tasks]);
+  }, [navigate, location, tasks, id, updateStatus]);
 };

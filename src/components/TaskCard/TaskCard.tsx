@@ -1,12 +1,12 @@
+import { useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import type { Task } from '../../types/task.ts';
 import Button from '../Button/Button.tsx';
-import styles from './TaskCard.module.css';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../store/store.ts';
-import { useNavigate } from 'react-router-dom';
 import { updateTask } from '../../store/tasksSlice.ts';
 import { useKeyboardShortcuts } from '../../hooks/useKeyboardShortcuts.ts';
+import styles from './TaskCard.module.css';
 
 export default function TaskCard({ task }: { task: Task }) {
   const tasks = useSelector((state: RootState) => state.tasks.tasks);
@@ -14,14 +14,7 @@ export default function TaskCard({ task }: { task: Task }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const updateStatus = (status: 'escalated' | 'done') => {
-    dispatch(updateTask({ id: task.id, data: { status } }));
-    goToNextTask();
-  };
-
-  useKeyboardShortcuts({ updateStatus });
-
-  const goToNextTask = () => {
+  const goToNextTask = useCallback(() => {
     const taskIndex = tasks.findIndex((t) => t.id === task.id);
     const nextTask = tasks[taskIndex + 1];
     if (nextTask) {
@@ -29,7 +22,14 @@ export default function TaskCard({ task }: { task: Task }) {
     } else {
       navigate('/');
     }
-  };
+  }, [tasks, navigate, task]);
+
+  const updateStatus = useCallback((status: 'escalated' | 'done') => {
+    dispatch(updateTask({ id: task.id, data: { status } }));
+    goToNextTask();
+  }, [dispatch, task, goToNextTask]);
+
+  useKeyboardShortcuts({ updateStatus });
 
   const saveBirthdate = () => {
     dispatch(updateTask({ id: task.id, data: { birthdate } }));

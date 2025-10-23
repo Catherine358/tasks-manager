@@ -1,6 +1,6 @@
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import tasksData from '../data/tasks.json';
 import type { Task } from '../types/task.ts';
-import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 interface TasksState {
   tasks: Task[];

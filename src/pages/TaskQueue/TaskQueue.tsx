@@ -1,13 +1,13 @@
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import TaskList from '../../components/TaskList/TaskList.tsx';
 import TaskStatistics from '../../components/TaskStatistics/TaskStatistics.tsx';
 import TaskCounter from '../../components/TaskCounter/TaskCounter.tsx';
-import styles from './TaskQueue.module.css';
 import Button from '../../components/Button/Button.tsx';
 import WeatherWidget from '../../components/WeatherWidget/WeatherWidget.tsx';
-import { useSelector } from 'react-redux';
 import type { RootState } from '../../store/store.ts';
-import { useNavigate } from 'react-router-dom';
 import FilterBar from '../../components/FilterBar/FilterBar.tsx';
+import styles from './TaskQueue.module.css';
 
 export default function TaskQueue() {
   const tasks = useSelector((state: RootState) => state.tasks.tasks);

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import TaskItem from '../TaskItem/TaskItem.tsx';
-import styles from './TaskList.module.css';
 import { selectFilteredTasks } from '../../store/tasksSlice.ts';
+import styles from './TaskList.module.css';
 
 export default function TaskList() {
   const tasks = useSelector(selectFilteredTasks);
