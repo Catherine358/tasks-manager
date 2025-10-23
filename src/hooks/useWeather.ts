@@ -28,7 +28,7 @@ export const useWeather = () => {
           description: getWeatherDescription(currentWeather.weathercode),
         });
         setLoading(false);
-      } catch (e) {
+      } catch {
         setError('Failed to fetch weather');
         setLoading(false);
       }

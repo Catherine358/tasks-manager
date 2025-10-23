@@ -8,7 +8,7 @@ interface TasksState {
 }
 
 const initialState: TasksState = {
-  tasks: tasksData,
+  tasks: tasksData as Task[],
   filter: 'all',
 };
 
