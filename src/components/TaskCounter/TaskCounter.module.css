@@ -1,14 +1,36 @@
 .counterCard {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     border-radius: 12px;
     padding: 1rem 1.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progressContainer {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.progressBackground {
+    stroke: #e5e7eb;
+}
+
+.progressBar {
+    stroke: #3b82f6;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease;
 }
 
 .counterRow {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
  }
