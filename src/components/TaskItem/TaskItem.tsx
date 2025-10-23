@@ -13,7 +13,8 @@ export default function TaskItem({ task }: { task: Task }) {
         onClick={taskHandler}
         className={`${styles.taskCard} ${styles[task.status]}`}
     >
-      {task.name}
+      <span>{task.contractNumber}</span>
+      <span>{task.status}</span>
     </li>
   );
 };
