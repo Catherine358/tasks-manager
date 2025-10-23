@@ -14,12 +14,12 @@ const tasksSlice = createSlice({
     name: "tasks",
     initialState,
     reducers: {
-        updateTaskStatus: (state, action: PayloadAction<{ id: number; status: 'escalated' | 'done' }>) => {
+        updateTask: (state, action: PayloadAction<{ id: number; data: Partial<Task> }>) => {
             const task = state.tasks.find(task => task.id === action.payload.id);
-            if (task) task.status = action.payload.status;
+            if (task) Object.assign(task, action.payload.data);
         }
     }
 });
 
-export const { updateTaskStatus } = tasksSlice.actions;
+export const { updateTask } = tasksSlice.actions;
 export default tasksSlice.reducer;

@@ -5,7 +5,7 @@ import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import type {RootState} from "../../store/store.ts";
 import {useNavigate} from "react-router-dom";
-import {updateTaskStatus} from "../../store/tasksSlice.ts";
+import {updateTask} from "../../store/tasksSlice.ts";
 
 export default function TaskCard({ task }: { task: Task }) {
     const tasks = useSelector((state: RootState) => state.tasks.tasks);
@@ -24,8 +24,12 @@ export default function TaskCard({ task }: { task: Task }) {
     };
 
     const updateStatus = (status: 'escalated' | 'done') => {
-        dispatch(updateTaskStatus({ id: task.id, status }));
+        dispatch(updateTask({ id: task.id, data: { status } }));
         goToNextTask();
+    };
+
+    const saveBirthdate = () => {
+        dispatch(updateTask({ id: task.id, data: { birthdate} }));
     };
 
     return (
@@ -64,13 +68,15 @@ export default function TaskCard({ task }: { task: Task }) {
                 <div className={styles.infoColumn}>
                     <label htmlFor="birthdate" className={styles.label}>Add missing birthdate information (DD.MM.YYYY)</label>
                     <input
+                        type="date"
                         id="birthdate"
                         className={styles.input}
                         placeholder="Add missing birthdate information"
                         value={birthdate}
+                        onChange={(e) => setBirthdate(e.target.value)}
                     />
                 </div>
-                <Button onClick={() => {}} text="Save" />
+                <Button onClick={saveBirthdate} text="Save" />
             </div>
             <div className={styles.actions}>
                 <Button onClick={() => updateStatus('done')} text="Done" className={`${styles.actionButton} ${styles.done}`} />
