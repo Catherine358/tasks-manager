@@ -3,7 +3,7 @@ import TaskCounter from "../../components/TaskCounter/TaskCounter.tsx";
 import TaskCard from "../../components/TaskCard/TaskCard.tsx";
 import {useSelector} from "react-redux";
 import type {RootState} from "../../store/store.ts";
-import Button from "../../components/Button/Button.tsx";
+import { Link } from "react-router-dom";
 import styles from './TaskDetails.module.css';
 
 export default function TaskDetails() {
@@ -26,9 +26,9 @@ export default function TaskDetails() {
             )}
             <div className={styles.backContainer}>
                 <span className={styles.backIcon}>←</span>
-                <a href="/" className={styles.back}>
+                <Link to="/" className={styles.back}>
                     Back to the queue
-                </a>
+                </Link>
             </div>
         </main>
     );

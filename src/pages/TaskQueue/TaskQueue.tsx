@@ -4,8 +4,20 @@ import TaskCounter from "../../components/TaskCounter/TaskCounter.tsx";
 import styles from './TaskQueue.module.css';
 import Button from "../../components/Button/Button.tsx";
 import WeatherWidget from "../../components/WeatherWidget/WeatherWidget.tsx";
+import {useSelector} from "react-redux";
+import type {RootState} from "../../store/store.ts";
+import {useNavigate} from "react-router-dom";
 
 export default function TaskQueue() {
+    const tasks = useSelector((state: RootState) => state.tasks.tasks);
+    const navigate = useNavigate();
+
+    const startQueue = () => {
+        if (tasks.length > 0) {
+            navigate(`/task/${tasks[0].id}`);
+        }
+    };
+
     return (
         <main className={styles.container}>
             <h1>Task Queue</h1>
@@ -19,7 +31,7 @@ export default function TaskQueue() {
             <section className={styles.statsSection}>
                 <TaskStatistics />
             </section>
-            <Button onClick={() => {}} text="Start queue from the beginning" />
+            <Button onClick={startQueue} text="Start queue from the beginning" />
         </main>
     );
 }
