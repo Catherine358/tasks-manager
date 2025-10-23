@@ -7,6 +7,7 @@ import WeatherWidget from "../../components/WeatherWidget/WeatherWidget.tsx";
 import {useSelector} from "react-redux";
 import type {RootState} from "../../store/store.ts";
 import {useNavigate} from "react-router-dom";
+import FilterBar from "../../components/FilterBar/FilterBar.tsx";
 
 export default function TaskQueue() {
     const tasks = useSelector((state: RootState) => state.tasks.tasks);
@@ -25,6 +26,7 @@ export default function TaskQueue() {
                 <TaskCounter />
                 <WeatherWidget />
             </section>
+            <FilterBar />
             <section className={styles.listSection}>
             <TaskList />
             </section>

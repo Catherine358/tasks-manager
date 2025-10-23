@@ -2,9 +2,10 @@ import {useSelector} from "react-redux";
 import type {RootState} from "../../store/store.ts";
 import TaskItem from "../TaskItem/TaskItem.tsx";
 import styles from './TaskList.module.css';
+import {selectFilteredTasks} from "../../store/tasksSlice.ts";
 
 export default function TaskList() {
-  const tasks = useSelector((state: RootState) => state.tasks.tasks);
+  const tasks = useSelector(selectFilteredTasks);
 
   return (
       <ul className={styles.taskList}>
