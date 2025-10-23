@@ -1,4 +1,4 @@
-import {useWeather} from "../../hooks/useWeather.ts";
+import { useWeather } from '../../hooks/useWeather.ts';
 import styles from './WeatherWidget.module.css';
 
 export default function WeatherWidget() {
@@ -16,4 +16,4 @@ export default function WeatherWidget() {
       </div>
     </div>
   );
-};
+}

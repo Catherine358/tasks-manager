@@ -1,39 +1,39 @@
 .taskCard {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    background: #E3ECF7;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 0.5rem;
-    transition: box-shadow 0.2s ease-in-out;
-    font-size: 1rem;
-    color: #000000;
-    text-align: left;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: #e3ecf7;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: box-shadow 0.2s ease-in-out;
+  font-size: 1rem;
+  color: #000000;
+  text-align: left;
 }
 
 .taskCard:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .taskCard:focus {
-    outline: 2px solid #2563eb;
-    outline-offset: 2px;
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
 }
 
 .status {
-    text-transform: capitalize;
-    font-weight: 600;
+  text-transform: capitalize;
+  font-weight: 600;
 }
 
 /* Status Colors */
 .done {
-    border-left: 5px solid #10b981;
+  border-left: 5px solid #10b981;
 }
 .new {
-    border-left: 5px solid #2563eb;
+  border-left: 5px solid #2563eb;
 }
 .escalated {
-    border-left: 5px solid #f59e0b;
+  border-left: 5px solid #f59e0b;
 }

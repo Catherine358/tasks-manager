@@ -1,51 +1,51 @@
 .counterCard {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 12px;
-    padding: 1rem 1.5rem;
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .progressContainer {
-    position: relative;
-    width: 220px;
-    height: 220px;
+  position: relative;
+  width: 220px;
+  height: 220px;
 }
 
 .progressBackground {
-    stroke: #e5e7eb;
+  stroke: #e5e7eb;
 }
 
 .progressBar {
-    stroke: #3b82f6;
-    stroke-linecap: round;
-    transition: stroke-dashoffset 0.5s ease;
+  stroke: #3b82f6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
 }
 
 .counterRow {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
- }
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
 
 .counterText {
-    font-size: 0.75rem;
-    color: #000000;
+  font-size: 0.75rem;
+  color: #000000;
 }
 
 .counterNumber {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #0074E8;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0074e8;
 }
 
 .counterInfo {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
