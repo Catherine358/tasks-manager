@@ -11,11 +11,18 @@ export default function TaskDetails() {
   const task = tasks.find((task) => task.id === Number(id));
 
   return (
-    <main>
+    <main className={styles.mainContainer}>
       <h1>Task Details</h1>
       <section>
         <TaskCounter />
       </section>
+        <p className={styles.info}>Use keyboard shortcuts for navigation:
+            Alt + h - return to queue
+            Alt + ArrowRight - next task
+            Alt + ArrowLeft - previous task
+            Alt + d - mark task as done
+            Alt + e - mark task as escalated
+        </p>
       {!task ? (
         <p>No task was found.</p>
       ) : (

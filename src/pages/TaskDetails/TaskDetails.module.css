@@ -3,6 +3,7 @@
   align-items: center;
   gap: 0.4rem;
   margin-top: 10px;
+  align-self: flex-start;
 }
 
 .back {
@@ -21,4 +22,15 @@
   color: #0074e8;
   font-size: 1.1rem;
   transform: translateY(-1px);
+}
+
+.info {
+  font-size: 0.75rem;
+  color: #808080;
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
